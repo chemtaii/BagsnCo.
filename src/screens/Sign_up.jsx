@@ -4,7 +4,7 @@ const Sign_up = () => {
   return (
     <div className="bg-white dark:bg-black pt-14 h-screen">
         
-        <div className="bg-white h-[600px] w-[500px] shadow-lg m-auto rounded-2xl p-6">
+        <div className="bg-white h-[600px] w-[500px] shadow-2xl m-auto rounded-2xl p-6">
       <h1 className="font-bold text-3xl text-[] text-center pb-8">Register Now</h1>
       <form>
         <div className="grid grid-rows-6 gap-8">
@@ -24,10 +24,11 @@ const Sign_up = () => {
         </div>
 
         <div class="flex items-center justify-center mt-3">
-        <button className="bg-[#eed6c2] rounded-xl p-2 w-1/2 text-white font-extrabold">
+        <button className="bg-[#fce1e6] rounded-xl p-2 w-1/2 font-extrabold">
                   SUBMIT
                 </button>
         </div>
+        
         </div>
       </form>
     </div>
