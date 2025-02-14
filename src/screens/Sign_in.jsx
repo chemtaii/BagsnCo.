@@ -41,6 +41,7 @@ const Sign_in = () => {
 
       await login(loginData).unwrap();
       console.log('Login Successful!');
+      navigate ('/home');
       
     } catch (error) {
       console.error('Login failed:', error);
@@ -57,7 +58,7 @@ const Sign_in = () => {
 
   return (
     <div className="bg-white dark:bg-black mt-20 h-screen">
-      <div className="bg-white h-[400px] w-[500px] text-center shadow-lg m-auto rounded-2xl p-6">
+      <div className="bg-white h-[400px] w-[500px] text-center shadow-lg m-auto rounded-2xl p-6 items-center justify-center">
         <h1 className="font-bold text-3xl text-center pb-4">Welcome back!</h1>
         <p className='pb-4'>Enter your credentials to continue shopping with us</p>
         <form onSubmit={handleSubmit}>

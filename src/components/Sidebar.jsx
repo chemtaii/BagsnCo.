@@ -1,26 +1,37 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
+import Logo from './Logo'; // Import Logo (ensure the path is correct)
+import DarkMode from './DarkMode';
+import landing from '/src/assets/landing.png?component'
 
 const Sidebar = () => {
   return (
-    <div className='bg-[#faebdf] w-1/2 h-screen'>
-          <Logo/>
-            <div className='grid grid-rows-5 gap-8 pt-15 text-xl font-bold ml-5'>
-                <div className=''>
-                <Link to="/home">HOME</Link>
-                </div>
-                <div className=''>
-                <Link to="/catalog">CATALOG</Link>
-                </div>
-                <div className=''>
-                <Link to="/sign_up">REGISTER</Link>
-                </div>
-                <div className=''>
-                <Link to="/sign_up">LOGIN</Link>
-                </div>
-    
-            </div>
-          </div>
-  )
-}
+    <div className="h-screen flex flex-col md:flex-row">
+        <div className='hidden md:flex bg-[#fce1e6] w-1/2 h-screen flex flex-col justify-start items-center p-8'>
+      <Logo />
+      <nav className="grid grid-rows-5 gap-8 pt-12 text-xl font-bold ml-5">
+        <div>
+          <Link to="/home">HOME</Link>
+        </div>
+        <div>
+          <Link to="/catalog">CATALOG</Link>
+        </div>
+        <div>
+          <Link to="/contact">CONTACT</Link>
+        </div>
+        <div>
+          <Link to="/sign_up">REGISTER</Link>
+        </div>
+        <div>
+          <Link to="/sign_in">LOGIN</Link>
+        </div>
+      </nav>
+      </div>
+      <div className='w-full md:w-1/2 my-auto h-screen flex justify-center items-center bg-white '>
+            <img src={landing} alt="Landing" className='max-w-full max-h-full'/>
+      </div>
+    </div>
+  );
+};
 
-export default Sidebar
+export default Sidebar;
