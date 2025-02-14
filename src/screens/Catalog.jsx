@@ -1,20 +1,21 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import DarkMode from '../components/DarkMode';
+import CategoriesSidebar from '../components/CategoriesSidebar';
 
 const Catalog = () => {
   return (
-    <div className='grid grid-cols-2'>
-        <div>
-        <Sidebar/>
-        <Navbar/>
-        </div>
-        <div>
-      <h1 className='text-black'>HELLO</h1>
+    <div className="flex">
+      {/* Sidebar (1/5 of the width) */}
+      <div className="w-1/5">
+        <CategoriesSidebar />
+      </div>
+
+      {/* Main Content (4/5 of the width) */}
+      <div className="w-4/5 p-4">
+        <h1 className="text-black">HELLO</h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Catalog
+export default Catalog;

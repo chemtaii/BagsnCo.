@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
-import Logo from './Logo'; // Import Logo (ensure the path is correct)
+import { Link } from 'react-router-dom'; 
+import Logo from './Logo'; 
 import DarkMode from './DarkMode';
 import landing from '/src/assets/landing.png?component'
 
@@ -23,14 +23,14 @@ const Sidebar = () => {
           <Link to="/wishlist">WISHLIST</Link>
         </div>
         <div>
-          <Link to="/contact">CONTACT</Link>
+        <a href="#footer">CONTACTS</a>
         </div>
-        <div>
+        {/* <div>
           <Link to="/sign_up">REGISTER</Link>
         </div>
         <div>
           <Link to="/sign_in">LOGIN</Link>
-        </div>
+        </div> */}
       </nav>
       </div>
       <div className='w-full md:w-1/2 my-auto h-screen flex justify-center items-center bg-white '>

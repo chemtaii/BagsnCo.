@@ -4,7 +4,6 @@ import Home from './screens/Home';
 import Sign_in from './screens/Sign_in';
 import Sign_up from './screens/Sign_up';
 import Catalog from './screens/Catalog';
-import Contact from './components/Contact';
 
 const WebRoutes = () => {
   return (
@@ -15,7 +14,6 @@ const WebRoutes = () => {
         <Route path="/sign_in" element={<Sign_in />} /> {/* Sign-in route */}
         <Route path="/sign_up" element={<Sign_up />} /> {/* Sign-up route */}
         <Route path="/catalog" element={<Catalog />} /> {/* Catalog route */}
-        <Route path="/contact" element={<Contact />} /> {/* Contact route */}
 
       </Routes>
     </Router>

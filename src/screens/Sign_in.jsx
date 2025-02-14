@@ -10,8 +10,9 @@ const Sign_in = () => {
         isLoading,
         loadingProgress,
     } =useSign_in()
-    
+
   return (
+    <>
     <div className="bg-white dark:bg-black mt-20 h-screen">
     <div className="bg-white h-[400px] w-[500px] text-center shadow-2xl m-auto rounded-2xl p-6 items-center justify-center">
       <h1 className="font-bold text-3xl text-center pb-4">Welcome back!</h1>
@@ -67,6 +68,7 @@ const Sign_in = () => {
       </form>
     </div>
   </div>
+  </>
   )
 }
 

@@ -4,7 +4,6 @@ import Logo from '../components/Logo';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
-// import landing from '/src/assets/landing.png'
 
 
 const Home = () => {
@@ -23,11 +22,20 @@ const Home = () => {
                     <p className="text-xl ml-1 my-4">Discover our exclusive collection of bags. 
                     Perfect for every occasion.
                     </p>
-                    <p><button className="mt-2 text-xl font-extrabold rounded-xl px-2 hover:bg-black hover:text-[#fce1e6] border hover:border-[#fce1e6] bg-[#fce1e6] border-transparent">SHOP NOW</button></p>
+                    <p>
+                    <Link to="/catalog">
+                        <button className="mt-2 text-xl rounded-xl p-2 w-1/2 font-bold hover:bg-black hover:text-[#fce1e6] border hover:border-[#fce1e6] bg-[#fce1e6] border-transparent">
+                        SHOP NOW
+                        </button>
+                    </Link>
+                    </p>
                 </div>
             </div>
       </div>
+      </div>
+
       <Navbar/>
+      <div id="footer" alt="footer">
       <Footer/>
       </div>
       </div>
