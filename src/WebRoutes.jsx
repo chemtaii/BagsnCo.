@@ -6,6 +6,8 @@ import Sign_up from './screens/Sign_up';
 import Catalog from './screens/Catalog';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Cart from './screens/Cart';
+import Wishlist from './screens/Wishlist';
 
 const WebRoutes = () => {
   return (
@@ -27,6 +29,9 @@ const WebRoutes = () => {
         <Route path="/sign_in" element={<Sign_in />} /> {/* Sign-in route */}
         <Route path="/sign_up" element={<Sign_up />} /> {/* Sign-up route */}
         <Route path="/catalog" element={<Catalog />} /> {/* Catalog route */}
+        <Route path="/cart" element={<Cart />} /> 
+        <Route path="/wishlist" element={<Wishlist />} /> 
+
 
       </Routes>
     </Router>

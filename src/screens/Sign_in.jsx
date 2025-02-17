@@ -8,7 +8,6 @@ const Sign_in = () => {
         handleChange,
         handleSubmit,
         isLoading,
-        loadingProgress,
     } =useSign_in()
 
   return (

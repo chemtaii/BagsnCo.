@@ -17,3 +17,12 @@ h1, h2, h3, h4, h5, h6 {
 .poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+.custom-link {
+  color: inherit; /* Inherits the text color from its parent */
+  text-decoration: none; /* Removes the underline */
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}

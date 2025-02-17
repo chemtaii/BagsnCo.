@@ -3,7 +3,7 @@ import WebRoutes from './WebRoutes';
 import {Provider} from 'react-redux';
 import { makeStore } from './Store';
 import './styles.css'
-import Footer from './components/Footer';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const store = makeStore();

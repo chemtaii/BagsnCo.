@@ -28,7 +28,15 @@ const useSign_in = () => {
         password: formData.password,
       };
 
-      await login(loginData).unwrap();
+      const response = await login(loginData).unwrap();
+    console.log('Login Response:', response); // Debugging log
+
+    const userData = {
+      email : response.email,
+      username : response.username,
+      token : response.token,
+    }
+      localStorage.setItem('user', JSON.stringify(userData));
       toast.success('Login Successful!');
       setTimeout(() => {
         navigate ('/home');
