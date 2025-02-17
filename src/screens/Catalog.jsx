@@ -4,6 +4,8 @@ import CategoriesSidebar from '../components/CategoriesSidebar';
 
 const Catalog = () => {
   return (
+    <>
+    <Navbar/>
     <div className="flex">
       {/* Sidebar (1/5 of the width) */}
       <div className="w-1/5">
@@ -15,6 +17,7 @@ const Catalog = () => {
         <h1 className="text-black">HELLO</h1>
       </div>
     </div>
+    </>
   );
 };
 

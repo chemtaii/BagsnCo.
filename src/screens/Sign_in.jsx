@@ -53,7 +53,7 @@ const Sign_in = () => {
             <button
               type="submit"
               className="bg-[#fce1e6] text-black rounded-xl p-2 w-1/2 font-bold" disabled={isLoading}>
-              {isLoading ? `Loading... ${loadingProgress}%` : 'LOGIN'}
+              {isLoading ? `Loading... ` : 'LOGIN'}
             </button>
           </div>
           <div className="text-center mb-3">

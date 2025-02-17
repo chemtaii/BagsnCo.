@@ -4,10 +4,23 @@ import Home from './screens/Home';
 import Sign_in from './screens/Sign_in';
 import Sign_up from './screens/Sign_up';
 import Catalog from './screens/Catalog';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const WebRoutes = () => {
   return (
   <Router> {/* Wrap everything in Router */}
+  <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
   <Routes> {/* Use Routes to define route mappings */}
         <Route path="/" element={<Home />} /> {/* Home route */}
         <Route path="/home" element={<Home />} /> {/* Home route */}

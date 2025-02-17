@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLoginMutation } from '../lib/apiSlice/auth/authSlice';
+import { useRegisterMutation } from '../lib/apiSlice/auth/authSlice';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 
-const useSign_in = () => {
+
+const useSign_up = () => {
   const [formData, setFormData] = useState({
+    username: '',
     email: '',
     password: '',
   });
 
-  const [login, { isLoading }] = useLoginMutation();
+  const [register, { isLoading }] = useRegisterMutation();
   const navigate = useNavigate();
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -21,28 +24,31 @@ const useSign_in = () => {
     }));
   };
 
-  const submitLogin = async () => {
+
+  const submitRegister = async () => {
     try {
-      const loginData = {
+
+      const registerData = {
+        username: formData.username,
         email: formData.email,
         password: formData.password,
       };
 
-      await login(loginData).unwrap();
-      toast.success('Login Successful!');
+      await register(registerData).unwrap();
+      toast.success('Registration Successful! Redirecting to login...');
       setTimeout(() => {
-        navigate ('/home');
+        navigate ('/sign_in');
     }, 3000);
       
     } catch (error) {
-      toast.error('Invalid credentials! Please try again');
-      console.error('Login failed:', error);
+        toast.error('Registration failed. Please try again.');
+      console.error('Registration failed:', error);
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    submitLogin();
+    submitRegister();
   };
 
 
@@ -54,4 +60,4 @@ const useSign_in = () => {
   };
 };
 
-export default useSign_in;
+export default useSign_up;
